@@ -77,5 +77,4 @@ print("\nThank you for using the Personal Data Collector of F1. Goodbye!")
    ```
 ---
 
-## Author
-Created as a Python fundamentals practice project.
+
