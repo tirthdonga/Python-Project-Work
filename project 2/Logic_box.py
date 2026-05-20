@@ -109,6 +109,7 @@ while True:
           print("Please Enter Valid Number!!")
 
     case 0:
+      print("Thank You, BYE!!👋👋👋\n")
       break
 
     case _:
