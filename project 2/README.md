@@ -128,8 +128,7 @@ Logic-Box/
 
 <div align="center">
 
-### ⭐ Created as a Beginner Python Project
+### ⭐ Thank You
 
-Made with Python ❤️
 
 </div>
