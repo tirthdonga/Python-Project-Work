@@ -99,7 +99,7 @@ Display Results
 ### 🔹 Pattern Generator
 
 <p align="center">
-  <img src="number.png" width="800">
+  <img src="number.png" width="400">
 </p>
 
 ---
@@ -107,7 +107,7 @@ Display Results
 ### 🔹 Number Analyzer
 
 <p align="center">
-  <img src="pattern.png" width="800">
+  <img src="pattern.png" width="400">
 </p>
 
 ---
