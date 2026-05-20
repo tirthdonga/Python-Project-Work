@@ -58,7 +58,7 @@ while True:
           continue
 
         case _:
-          print("Invalid Number Please Try Again!!")
+          print("\n!!Invalid Number Please Try Again!!")
 
     case 2:
       print("\n--------------------------")
@@ -106,11 +106,11 @@ while True:
           continue
 
         case _:
-          print("Please Enter Valid Number!!")
+          print("\n!!Please Enter Valid Number!!")
 
     case 0:
       print("Thank You, BYE!!👋👋👋\n")
       break
 
     case _:
-      print("Invalid Number Enterred")
+      print("\n!!Invalid Number Enterred")

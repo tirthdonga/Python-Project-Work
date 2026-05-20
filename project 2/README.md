@@ -116,10 +116,12 @@ Display Results
 
 <p align="center">
   <img src="error.png" width="400">
+  <img src="error2.png" width="400">
 </p>
 
 
 ---
+
 
 ## <span style="color:#3498DB;">📁 Project Structure</span>
 
