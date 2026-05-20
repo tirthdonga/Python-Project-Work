@@ -94,7 +94,7 @@ Display Results
 
 ---
 
-## <span style="color:#3498DB;">🖼 Application Preview</span>
+## <span style="color:#3498DB;">🖼 Application Preview (Output)</span>
 
 ### 🔹 Pattern Generator
 
