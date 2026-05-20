@@ -56,7 +56,7 @@ print("\nThank you for using the Personal Data Collector of F1. Goodbye!")
 
 ## Output Screenshot
 
-<img width="932" height="511" alt="Screenshot 2026-05-14 155242" src="https://github.com/user-attachments/assets/92a6985a-dfa9-4b00-bbdb-f198e5dc473f" />
+<img width="932" height="511" alt="Screenshot Output" src="ss.png" />
 
 ---
 
