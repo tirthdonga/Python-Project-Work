@@ -112,6 +112,15 @@ Display Results
 
 ---
 
+### 🔹 Error Handling
+
+<p align="center">
+  <img src="error.png" width="400">
+</p>
+
+
+---
+
 ## <span style="color:#3498DB;">📁 Project Structure</span>
 
 ```text
