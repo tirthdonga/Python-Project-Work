@@ -2,6 +2,7 @@ while True:
   print("\n----------------------------------------------------")
   print("Welcome To The Pattern Genrator and Number Analyzer")
   print("----------------------------------------------------\n")
+
   print("Enter 1 To Generate Pattern")
   print("Enter 2 To Analyze Number")
   print("Enter 0 To Exit\n")
@@ -14,6 +15,7 @@ while True:
       print("\n-----------------------------")
       print("Welcome To Pattern generator")
       print("-----------------------------\n")
+      
       print("Enter 1 To Generate Right Side Pattern")
       print("Enter 2 To Generate left Side Pattern")
       print("Enter 3 To Generate Middle Side Pattern")
