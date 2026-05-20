@@ -23,7 +23,7 @@ while True:
 
       match pattern:
         
-        case 1:
+        case 1: # For Right Side Pattern
           row = int(input("\nPlease Enter How Many Row You Want: "))
           print("Here is Right Side Pattern\n")
           
@@ -34,7 +34,7 @@ while True:
               print("*", end=(" "))
             print()
 
-        case 2:
+        case 2: # For Left Side Pattern
           row = int(input("\nPlease Enter How Many Row You Want: "))
           print("Here is Left Side Pattern\n")
 
@@ -43,7 +43,7 @@ while True:
               print("*", end=(" "))
             print()
 
-        case 3:
+        case 3: # For Middle Side Pattern
           row = int(input("\nPlease Enter How Many Row You Want: "))
           print("Here is Middle Side Pattern\n")
 
@@ -60,7 +60,7 @@ while True:
         case _:
           print("\n!!Invalid Number Please Try Again!!")
 
-    case 2:
+    case 2: # For Number Analyzer
       print("\n--------------------------")
       print("Welcome To Number Analyzer")
       print("--------------------------\n")
@@ -82,21 +82,21 @@ while True:
       sum_num = int(input("\nPlease Enter The Number: "))
 
       match sum_num:
-        case 1:
+        case 1: # For Sum Of Even Number
           sum = 0
           for i in range (num_start, end_start + 1):
             if i % 2 == 0:
               sum += i
           print("\nTotal Sum of Even Number is:", sum)
         
-        case 2:
+        case 2: # For Sum Of Odd Number
           sum = 0
           for i in range (num_start, end_start + 1):
             if i % 2 != 0:
               sum += i
           print("\nTotal Sum Of Odd Number is:", sum)
 
-        case 3:
+        case 3: # For Total Sum Of Number
           sum = 0
           for i in range (num_start, end_start + 1):
             sum += i
