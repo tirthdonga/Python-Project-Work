@@ -130,9 +130,9 @@ Logic-Box/
 │
 ├── Logic_box.py
 ├── README.md
-├── images/
-├── pattern_output.png
-└── number_analyzer_output.png
+└── images/
+      ├── pattern_output.png
+      └── number_analyzer_output.png
 ```
 
 ---
