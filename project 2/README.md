@@ -116,6 +116,7 @@ Display Results
 
 <p align="center">
   <img src="image/error.png" width="400">
+---
   <img src="image/error2.png" width="400">
 </p>
 
