@@ -131,7 +131,7 @@ Logic-Box/
 │
 ├── Logic_box.py
 ├── README.md
-└── images/
+└── image/
       ├── pattern.png
       ├── number.png
       ├── error.png
