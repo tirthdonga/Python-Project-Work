@@ -127,7 +127,7 @@ Display Results
 ## <span style="color:#3498DB;">📁 Project Structure</span>
 
 ```text
-Logic-Box/
+project 2/
 │
 ├── Logic_box.py
 ├── README.md
