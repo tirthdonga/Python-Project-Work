@@ -132,8 +132,10 @@ Logic-Box/
 ├── Logic_box.py
 ├── README.md
 └── images/
-      ├── pattern_output.png
-      └── number_analyzer_output.png
+      ├── pattern.png
+      ├── number.png
+      ├── error.png
+      └── error2.png
 ```
 
 ---
