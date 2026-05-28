@@ -241,6 +241,7 @@ Deleting Student
 After Deleting
 ```
 <img src="images/after_delete.png" width="600">
+
 ---
 
 # 🧹 Clear All Data
