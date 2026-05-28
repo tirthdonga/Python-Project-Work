@@ -99,7 +99,7 @@ Display Results
 ### 🔹 Pattern Generator
 
 <p align="center">
-  <img src="image/number.png" width="400">
+  <img src="image/pattern.png" width="400">
 </p>
 
 ---
@@ -107,7 +107,7 @@ Display Results
 ### 🔹 Number Analyzer
 
 <p align="center">
-  <img src="image/pattern.png" width="400">
+  <img src="image/number.png" width="400">
 </p>
 
 ---
@@ -116,6 +116,7 @@ Display Results
 
 <p align="center">
   <img src="image/error.png" width="400">
+---
   <img src="image/error2.png" width="400">
 </p>
 
@@ -126,13 +127,15 @@ Display Results
 ## <span style="color:#3498DB;">📁 Project Structure</span>
 
 ```text
-Logic-Box/
+project 2/
 │
 ├── Logic_box.py
 ├── README.md
-├── images/
-├── pattern_output.png
-└── number_analyzer_output.png
+└── image/
+      ├── pattern.png
+      ├── number.png
+      ├── error.png
+      └── error2.png
 ```
 
 ---
