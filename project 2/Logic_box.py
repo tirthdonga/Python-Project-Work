@@ -8,7 +8,6 @@ while True:
   print("Enter 0 To Exit\n")
 
   btn = int(input("Please Enter Number(1, 2, 0): "))
-  print()
 
   match btn:
     case 1: # For Pattern Generator
