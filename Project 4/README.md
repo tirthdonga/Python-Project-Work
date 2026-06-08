@@ -1,6 +1,13 @@
-# 📊 Data Analyzer and Transformer Program
+<div align="center">
 
+# 📊 Data Analyzer and Transformer Program
 ### *Interactive Python Console Application for Dataset Analysis and Transformation*
+
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![CLI](https://img.shields.io/badge/Interface-Console%20Based-4CAF50?style=for-the-badge&logo=windowsterminal&logoColor=white)
+![Data](https://img.shields.io/badge/Data-Lists%20%7C%20Dictionary%20%7C%20Set-FF9800?style=for-the-badge&logo=python&logoColor=white)
+
+</div>
 
 ---
 
