@@ -221,7 +221,7 @@ while True:
           print("--------------------------------------------------")
           print(f"- Minimum value: {min_val}")
           print(f"- Maximum value: {max_val}")
-          print(f"- Sum of all values: {total_sum}")  # Added sum back here!
+          print(f"- Sum of all values: {total_sum}") 
           print(f"- Average value: {avg_val}")
           print("--------------------------------------------------")
     case 7: 
