@@ -81,11 +81,13 @@ The program should:
 # 🏗️ Project Structure
 
 ```text
-📦 Project/
+📦 Project 4/
 │
 ├── 📄 data_analyzer.py
 │
-└── 📄 README.md
+├──  📄 README.md
+│
+└── 📁 images
 ```
 
 ---
@@ -121,14 +123,14 @@ Allows users to store data in two different ways:
 
 ### Concepts Used
 
-- Lists
+- Array
 - Loops
 - User Input
 - Global Variables
 
 ### Output
 
-<img src="">
+<img src="images/input_data.png" width="700">
 
 ---
 
@@ -151,6 +153,10 @@ Generates a quick overview of the dataset.
 - Built-in Functions
 - Dynamic Precision Handling
 
+### Output
+
+<img src="images/data_sum.png" width="400">
+
 ---
 
 # 🧮 Calculate Factorial
@@ -161,13 +167,10 @@ Searches the dataset for a user-entered value and calculates its factorial using
 
 - Recursive Functions
 - Searching Algorithms
-- Conditional Statements
 
-Example:
+### Output
 
-```text
-5! = 120
-```
+<img src="images/fac.png" width="400">
 
 ---
 
@@ -179,16 +182,11 @@ Filters dataset values according to a threshold entered by the user.
 
 - Lambda Functions
 - filter()
-- Lists
+- map()
 
-Example:
+### Output
 
-```text
-Threshold = 5
-
-Output:
-5, 6, 7, 8, 9, 10
-```
+<img src="images/thresh.png" width="600">
 
 ---
 
@@ -203,9 +201,13 @@ Sorts the dataset based on user preference.
 
 ### Concepts Used
 
-- List Sorting
+- Array Sorting
 - Match Case
 - Boolean Flags
+
+### Output
+
+<img src="images/sort.png" width="400">
 
 ---
 
@@ -226,18 +228,19 @@ Calculates dataset statistics using custom logic instead of built-in aggregation
 - Loops
 - Manual Calculations
 
+### Output
+
+<img src="images/stat.png" width="400">
+
 ---
 
 # 🖨️ Print Current Dataset
 
 Displays the currently stored dataset.
 
-Example:
+### Output
 
-```text
-Current Data Set:
-[3, 4, 1, 5, 8, 9, 6, 2, 7, 10]
-```
+<img src="images/print.png" width="400">
 
 ---
 
@@ -255,13 +258,11 @@ The program contains error handling mechanisms to improve reliability and user e
 
 ### Example Errors
 
-```text
-🛑 Error: Dataset is empty.
+### Output
 
-🛑 Error: Number is not present in dataset.
-
-🛑 You Entered An Invalid Choice.
-```
+<img src="images/error1.png" width="400">
+<img src="images/error2.png" width="320">
+<img src="images/error3.png" width="400">
 
 ---
 

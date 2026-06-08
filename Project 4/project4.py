@@ -38,7 +38,7 @@ def input_data_case():
 # case 2
 # build in function use
 def data_summary(*args, **kwargs):
-    '''Computes and prints dataset summaries, using **kwargs for dynamic decimal precision control.'''
+    '''Computes and prints dataset summaries.'''
     if not args:
         print("\n--------------------------------------------------")
         print("🛑 Error: Dataset is empty.")
@@ -66,7 +66,7 @@ def data_summary(*args, **kwargs):
 # case 3
 # Factorial Calculate (Recursive Architecture)
 def factorial_case():
-    '''Finds a targeted integer within the global dataset and calculates its mathematical factorial value via function recursion if present.'''
+    '''Finds a targeted integer within the global dataset and calculates its mathematical factorial.'''
     global arr
     if not arr:
         print("\n--------------------------------------------------")
@@ -116,7 +116,7 @@ def filter_data_case(*args):
 # case 5
 # Sort The Data
 def sort_case():
-  '''Queries the user for their sorting direction preference and reorders the global dataset in-place.'''
+  '''Queries the user for their sorting direction preference'''
   global arr
   if not arr:
         print("\n--------------------------------------------------")
@@ -145,13 +145,11 @@ def sort_case():
 
 # case 6
 # Statistics Using UDF
+
 def statistics_case(*args):
-    '''Calculates array bounds and averages using standard custom algorithmic loops rather than built-in aggregation methods.'''
+    '''Calculates and returns multiple dataset statistics'''
     if not args:
-      print("\n--------------------------------------------------")
-      print("🛑 Error: Dataset is empty.")
-      print("--------------------------------------------------")
-      return
+      return None
 
     temp_arr = sorted(args)
     minimum = temp_arr[0]
@@ -162,15 +160,7 @@ def statistics_case(*args):
       sum_val += i
         
     average = round(sum_val / len(temp_arr), 2)
-    
-    print("\n--------------------------------------------------")
-    print("            DATASET STATISTICS BY UDF             ")
-    print("--------------------------------------------------")
-    print(f"- Minimum value: {minimum}")
-    print(f"- Maximum value: {maximum}")
-    print(f"- Sum of all values: {sum_val}")
-    print(f"- Average value: {average}")
-    print("--------------------------------------------------")
+    return minimum, maximum, sum_val, average
     
 # case: 7
 # Print Data set
@@ -219,7 +209,21 @@ while True:
       sort_case()
     case 6:
       display_docstring(statistics_case)
-      statistics_case(*arr)
+      stats_result = statistics_case(*arr)
+      if stats_result is None:
+          print("\n--------------------------------------------------")
+          print("🛑 Error: Dataset is empty.")
+          print("--------------------------------------------------")
+      else:
+          min_val, max_val, total_sum, avg_val = stats_result
+          print("\n--------------------------------------------------")
+          print("            DATASET STATISTICS BY UDF             ")
+          print("--------------------------------------------------")
+          print(f"- Minimum value: {min_val}")
+          print(f"- Maximum value: {max_val}")
+          print(f"- Sum of all values: {total_sum}")  # Added sum back here!
+          print(f"- Average value: {avg_val}")
+          print("--------------------------------------------------")
     case 7: 
       display_docstring(print_data_case)
       print_data_case()
