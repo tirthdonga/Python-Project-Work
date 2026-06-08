@@ -1,238 +1,144 @@
-arr = []
+arr1 = []
+arr2 = []
+arr_dim = None
 
-# __doc__
-def display_docstring(func):
-    """Prints the __doc__ of a given function to the console."""
-    if func.__doc__:
-        print("\n--------------------------------------------------")
-        print(f"FUNCTION INFO: {func.__doc__.strip()}")
-        print("--------------------------------------------------")
+def sample_1d():
+    """Loads a predefined sample 1D array."""
+    global arr1, arr_dim
+    arr1 = [10, 3, 7, 32, 21, 76, 80, 110, 6]
+    arr_dim = "1d"
 
-# case 1
-# input 
-def input_data_case():
-  '''Prompts the user to either select preset sample data or manually input a space-separated 1D array.'''
-  global arr
-  print("\n--- Data Input Options ---")
-  print("1. Use Sample Data")
-  print("2. Use Manual Data Entry")
-  
-  choice_case1 = int(input("\nEnter Your Choice: "))
-  match choice_case1:
-    case 1: 
-      arr = [3, 4, 1, 5, 8, 9, 6, 2, 7, 10]
-      print("\n--------------------------------------------------")
-      print(f"Stored Dataset: {arr}")
-      print("Data Has Been Stored Successfully!")
-      print("--------------------------------------------------")
-    case _:
-      print("\nEnter data for a 1D array (separated by spaces):")
-      user_input = input()
-      arr = []
-      for i in user_input.split():
-        arr.append(int(i))
-      print("\n--------------------------------------------------")
-      print("Data Has Been Stored Successfully!")
-      print("--------------------------------------------------")
-    
-# case 2
-# build in function use
-def data_summary(*args, **kwargs):
-    '''Computes and prints dataset summaries.'''
-    if not args:
-        print("\n--------------------------------------------------")
-        print("🛑 Error: Dataset is empty.")
-        print("--------------------------------------------------")
-        return
+def manual_1d(input_string):
+    """Converts a space-separated string into a 1D array."""
+    global arr1, arr_dim
+    arr1 = []
+    for i in input_string.split():
+        arr1.append(int(i))
+    arr_dim = "1d"
 
-    decimals = kwargs.get('precision', 2)
+def sample_2d():
+    """Loads a predefined sample 2D matrix."""
+    global arr2, arr_dim
+    arr2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    arr_dim = "2d"
 
-    total_element = len(args)
-    min_value = min(args)
-    max_value = max(args)
-    sum_value = sum(args)
-    ave_value = round(sum_value / total_element, decimals)
+def manual_2d(rows):
+    """Prompts user to input data for a 2D matrix row by row."""
+    global arr2, arr_dim
+    arr2 = []
+    print("\nEnter each row's numbers separated by spaces:")
+    for i in range(rows):
+        row_input = input(f"Row {i + 1}: ")
+        row = []
+        for x in row_input.split():
+            row.append(int(x))
+        arr2.append(row)
+    arr_dim = "2d"
 
-    print("\n--------------------------------------------------")
-    print("                DATASET SUMMARY                   ")
-    print("--------------------------------------------------")
-    print(f"Total elements       : {total_element}")
-    print(f"Minimum Value       : {min_value}")
-    print(f"Maximum Value       : {max_value}")
-    print(f"Sum Of All Values   : {sum_value}")
-    print(f"Average Of All Values: {ave_value}")
-    print("--------------------------------------------------")
+def maximum():
+    """Returns the maximum value found in the 2D matrix."""
+    Max = arr2[0][0]
+    for row in arr2:
+        for ele in row:
+            if ele > Max:
+                Max = ele
+    return Max
 
-# case 3
-# Factorial Calculate (Recursive Architecture)
-def factorial_case():
-    '''Finds a targeted integer within the global dataset and calculates its mathematical factorial.'''
-    global arr
-    if not arr:
-        print("\n--------------------------------------------------")
-        print("🛑 Error: Dataset is empty. Please input data first (Option 1).")
-        print("--------------------------------------------------")
-        return
+def minimum():
+    """Returns the minimum value found in the 2D matrix."""
+    Min = arr2[0][0]
+    for row in arr2:
+        for ele in row:
+            if ele < Min:
+                Min = ele
+    return Min
 
-    def calculate_factorial(n):
-        if n == 0 or n == 1:
-            return 1
-        return n * calculate_factorial(n - 1)
+def total_sum():
+    """Calculates the sum of all elements in the 2D matrix."""
+    Sum = 0
+    for row in arr2:
+        for ele in row:
+            Sum += ele
+    return Sum
 
-    fac_num = int(input("\nEnter Number You Want Factorial Of: "))
-    found = False
-    
-    print("\n--------------------------------------------------")
-    for i in range(len(arr)):
-        if fac_num == arr[i]:
-            found = True
-            fac_result = calculate_factorial(fac_num)
-            print(f"Factorial of {fac_num} is: {fac_result}")
-            break 
-            
-    if not found:
-      print(f"🛑 Error: {fac_num} is not present in the dataset.")
-    print("--------------------------------------------------")
+def average():
+    """Calculates the average of all elements in the 2D matrix."""
+    Sum = 0
+    NoOfElement = 0
+    for row in arr2:
+        for ele in row:
+            Sum += ele
+            NoOfElement += 1
+    return Sum / NoOfElement
 
-# case 4
-# Filter Data By Threshold
-def filter_data_case(*args):
-    '''Asks for a threshold and filters out values from the passed dataset elements.'''
-    if not args:
-        print("\n--------------------------------------------------")
-        print("🛑 Error: Dataset is empty.")
-        print("--------------------------------------------------")
-        return
-
-    threshold = int(input("\nEnter a threshold value to filter out data above this value: "))
-    filtered_iterator = filter(lambda x: x >= threshold, args)
-    filtered_result = list(filtered_iterator)
-    
-    print("\n--------------------------------------------------")
-    print(f"Filtered Data (values >= {threshold}):")
-    print(", ".join(map(str, filtered_result)))
-    print("--------------------------------------------------")
-
-# case 5
-# Sort The Data
-def sort_case():
-  '''Queries the user for their sorting direction preference'''
-  global arr
-  if not arr:
-        print("\n--------------------------------------------------")
-        print("🛑 Error: Dataset is empty.")
-        print("--------------------------------------------------")
-        return
-  
-  print("\n--- Choose Sorting Order ---")
-  print("1. Descending")
-  print("2. Ascending")
-  sort_choice = int(input("\nEnter Your Choice: "))
-
-  match sort_choice:
-    case 1:
-      sort_order = True
-      sort = "Descending"
-    case _:
-      sort_order = False
-      sort = "Ascending"
-  
-  arr.sort(reverse=sort_order)
-  print("\n--------------------------------------------------")
-  print(f"Your Data Has Been Sorted in {sort} Order: ")
-  print(", ".join(map(str, arr)))
-  print("--------------------------------------------------")
-
-# case 6
-# Statistics Using UDF
-
-def statistics_case(*args):
-    '''Calculates and returns multiple dataset statistics'''
-    if not args:
-      return None
-
-    temp_arr = sorted(args)
-    minimum = temp_arr[0]
-    maximum = temp_arr[-1]
-    
-    sum_val = 0
-    for i in temp_arr:
-      sum_val += i
-        
-    average = round(sum_val / len(temp_arr), 2)
-    return minimum, maximum, sum_val, average
-    
-# case: 7
-# Print Data set
-def print_data_case():
-    '''Printing Your Current Data Set Elements'''
-    global arr
-    if not arr:
-      print("\n--------------------------------------------------")
-      print("🛑 Error: Dataset is empty.")
-      print("--------------------------------------------------")
+def data_stat(*args, **kwargs):
+    """Returns min, max, sum, and average, allowing extra args and precision kwargs."""
+    if arr_dim == "1d":
+        min_val = min(arr1)
+        max_val = max(arr1)
+        sum_val = sum(arr1)
+        avg_val = sum_val / len(arr1)
     else:
-      print(f"Current Data Set: {arr}")
-#-----------------------------------------------------------------------------------------
+        min_val = minimum()
+        max_val = maximum()
+        sum_val = total_sum()
+        avg_val = average()
+    
+    # Example use of kwargs: adjust rounding precision
+    precision = kwargs.get('precision', 2)
+    return min_val, max_val, sum_val, round(avg_val, precision)
+
+def factorial(n):
+    """Calculates the factorial of a number using recursion."""
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)
+
+print("\n" + "Welcome to Data Analyzer and Transformer Program".center(90, "-"))
 
 while True:
-  print("\n--------------------------------------------------")
-  print("Welcome To Data Analyzer and Transformer Program")
-  print("--------------------------------------------------")
-  print("1. Input Data")
-  print("2. Display Data Summary")
-  print("3. Calculate Factorial")
-  print("4. Filter Data By Threshold")
-  print("5. Sort Data")
-  print("6. Display Dataset Statistics")
-  print("7. Print Your Data")
-  print("0. Exit Program")
-  print("--------------------------------------------------")
+    print("\nSelect from the menu which operation you want to use:\n")
+    print("1. Insert Data as an array\n2. Display Data Summary\n3. Calculate Factorial\n4. Filter Data By Threshold\n5. Sort Data\n6. Display Dataset Statistics\n0. Exit")
+    choice = int(input('\nEnter your choice: '))
+    
+    match choice:
+        case 1:
+            choice_dim = int(input("\n1. 1D Array\n2. 2D Array\nChoice: "))
+            choice_src = int(input("1. Sample\n2. Manual\nChoice: "))
+            if choice_dim == 1:
+                sample_1d() if choice_src == 1 else manual_1d(input("Numbers: "))
+            else:
+                sample_2d() if choice_src == 1 else manual_2d(int(input("Rows: ")))
 
-  choice = int(input("Enter Your Choice: "))
+        case 2:
+            if arr_dim == None:
+                continue
+            if arr_dim == "1d":
+                print(f"Min: {min(arr1)}, Max: {max(arr1)}, Sum: {sum(arr1)}, Avg: {sum(arr1)/len(arr1):.2f}")
+            else:
+                print(f"Min: {minimum()}, Max: {maximum()}, Sum: {total_sum()}, Avg: {average():.2f}")
 
-  match choice:
-    case 1: 
-      display_docstring(input_data_case)
-      input_data_case()
-    case 2: 
-      display_docstring(data_summary)
-      data_summary(*arr, precision=2)
-    case 3:
-      display_docstring(factorial_case)
-      factorial_case()
-    case 4: 
-      display_docstring(filter_data_case)
-      filter_data_case(*arr)
-    case 5:
-      display_docstring(sort_case)
-      sort_case()
-    case 6:
-      display_docstring(statistics_case)
-      stats_result = statistics_case(*arr)
-      if stats_result is None:
-          print("\n--------------------------------------------------")
-          print("🛑 Error: Dataset is empty.")
-          print("--------------------------------------------------")
-      else:
-          min_val, max_val, total_sum, avg_val = stats_result
-          print("\n--------------------------------------------------")
-          print("            DATASET STATISTICS BY UDF             ")
-          print("--------------------------------------------------")
-          print(f"- Minimum value: {min_val}")
-          print(f"- Maximum value: {max_val}")
-          print(f"- Sum of all values: {total_sum}") 
-          print(f"- Average value: {avg_val}")
-          print("--------------------------------------------------")
-    case 7: 
-      display_docstring(print_data_case)
-      print_data_case()
-    case 0:
-      print("\n--------------------------------------------------")
-      print("Exiting Program. Goodbye! 👋")
-      print("--------------------------------------------------\n")
-      break
-    case _:
-      print("\n--------------------------------------------------")
-      print("🛑 You Entered An Invalid Choice")
-      print("--------------------------------------------------")
+        case 3:
+            n = int(input("\nEnter number: "))
+            print(f"Result: {factorial(n)}")
+
+        case 4:
+            if arr_dim == None: continue
+            threshold = int(input("Threshold: "))
+            data = arr1 if arr_dim == "1d" else [x for row in arr2 for x in row]
+            print([x for x in data if x >= threshold])
+
+        case 5:
+            if arr_dim == None: continue
+            rev = int(input("1. Asc\n2. Desc\nChoice: ")) == 2
+            if arr_dim == "1d": arr1.sort(reverse=rev); print(arr1)
+            else: [row.sort(reverse=rev) for row in arr2]; print(arr2)
+
+        case 6:
+            if arr_dim == None: continue
+            # Calling with *args (e.g., a custom label) and **kwargs (precision)
+            d_min, d_max, d_sum, d_avg = data_stat("StatReport", precision=3)
+            print(f"\nMin: {d_min}, Max: {d_max}, Sum: {d_sum}, Avg: {d_avg:.3f}")
+
+        case 0:
+            break

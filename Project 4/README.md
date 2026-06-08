@@ -24,7 +24,6 @@
 - 4-[🔍 Filter Data By Threshold](#-filter-data-by-threshold)
 - 5-[↕️ Sort Data](#️-sort-data)
 - 6-[📈 Dataset Statistics Using UDF](#-dataset-statistics-using-udf)
-- 7-[🖨️ Print Current Dataset](#️-print-current-dataset)
 - [🚫 Error Handling](#-error-handling)
 - [🛠️ Tech Stack](#️-tech-stack)
 - [📈 Results & Insights](#-results--insights)
@@ -92,7 +91,7 @@ The program should:
 │
 ├── 📄 data_analyzer.py
 │
-├──  📄 README.md
+├── 📄 README.md
 │
 └── 📁 images
 ```
@@ -108,6 +107,9 @@ Program Start
  Display Main Menu
       │
       ├── 1 ➜ Input Data
+      │           ├── 1 ➜ 1D Array
+      │           └── 2 ➜ 2D Array
+      │
       ├── 2 ➜ Display Data Summary
       ├── 3 ➜ Calculate Factorial
       ├── 4 ➜ Filter Data By Threshold
@@ -137,7 +139,15 @@ Allows users to store data in two different ways:
 
 ### Output
 
-<img src="images/input_data.png" width="700">
+```
+For 1D List
+```
+<img src="images/input.png" width="400">
+
+```
+For 2D List
+```
+<img src="images/input2.png" width="400">
 
 ---
 
@@ -161,8 +171,16 @@ Generates a quick overview of the dataset.
 - Dynamic Precision Handling
 
 ### Output
-
+```
+For 1D List
+```
 <img src="images/data_sum.png" width="400">
+
+```
+For 2D List
+```
+<img src="images/data_sum2.png" width="400">
+
 
 ---
 
@@ -177,7 +195,8 @@ Searches the dataset for a user-entered value and calculates its factorial using
 
 ### Output
 
-<img src="images/fac.png" width="400">
+<img src="images/factorial.png" width="400">
+
 
 ---
 
@@ -193,7 +212,15 @@ Filters dataset values according to a threshold entered by the user.
 
 ### Output
 
-<img src="images/thresh.png" width="600">
+```
+For 1D List
+```
+<img src="images/thresh.png" width="400">
+
+```
+For 2D List
+```
+<img src="images/thresh2.png" width="400">
 
 ---
 
@@ -214,11 +241,19 @@ Sorts the dataset based on user preference.
 
 ### Output
 
+```
+For 1D List
+```
 <img src="images/sort.png" width="400">
+
+```
+For 2D List
+```
+<img src="images/sort2.png" width="400">
 
 ---
 
-# 📈 Dataset Statistics Using UDF
+# 📈 Dataset Statistics
 
 Calculates dataset statistics using custom logic instead of built-in aggregation methods.
 
@@ -237,17 +272,15 @@ Calculates dataset statistics using custom logic instead of built-in aggregation
 
 ### Output
 
+```
+For 1D List
+```
 <img src="images/stat.png" width="400">
 
----
-
-# 🖨️ Print Current Dataset
-
-Displays the currently stored dataset.
-
-### Output
-
-<img src="images/print.png" width="400">
+```
+For 2D List
+```
+<img src="images/stat2.png" width="400">
 
 ---
 
@@ -268,7 +301,7 @@ The program contains error handling mechanisms to improve reliability and user e
 ### Output
 
 <img src="images/error1.png" width="400">
-<img src="images/error2.png" width="320">
+<img src="images/error2.png" width="400">
 <img src="images/error3.png" width="400">
 
 ---
