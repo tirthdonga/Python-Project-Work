@@ -73,7 +73,7 @@ The program should:
 ```text
 📦 Project 5/
 │
-├── 📄 employee_management.py
+├── 📄 employee.py
 │
 ├── 📄 README.md
 │
