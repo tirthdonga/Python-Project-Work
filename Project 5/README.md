@@ -133,6 +133,7 @@ Creates an employee with:
 ### Concepts Used
 
 - Constructor
+- Destroctor
 - Encapsulation
 - Private Variables
 
@@ -158,7 +159,7 @@ Additional Field:
 
 ### Output
 
-<img src="images/manager.png" width="250">
+<img src="images/Manager.png" width="250">
 
 ---
 
