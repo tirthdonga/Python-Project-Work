@@ -60,6 +60,7 @@ manager_list = []
 developer_list = []
 
 while True:
+    print("\nEmployee Management System")
     print("\n1. Create Person")
     print("2. Create Employee")
     print("3. Create Manager")
