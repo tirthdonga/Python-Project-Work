@@ -24,6 +24,7 @@
 - [👨‍💻 Create Developer](#-create-developer)
 - [📄 Display All Records](#-display-all-records)
 - [🔍 Check Subclass](#-check-subclass)
+- [🧹 Destructor](#-destructor)
 - [🚫 Error Handling](#-error-handling)
 - [🛠️ Tech Stack](#-tech-stack)
 - [📈 Results & Insights](#-results--insights)
@@ -212,7 +213,7 @@ Uses `issubclass()` to check inheritance.
 <img src="images/sub.png" width="400">
 
 ---
-# Destructor
+# 🧹 Destructor
 
 A destructor is a special member function that is automatically called when an object goes out of scope or is explicitly deleted to deallocate memory and clean up resources used by that object.
 
