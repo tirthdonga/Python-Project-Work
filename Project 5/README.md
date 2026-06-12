@@ -117,7 +117,7 @@ Creates a basic person object.
 
 ### Output
 
-<img src="images/" width="400">
+<img src="images/person.png" width="250">
 
 ---
 
@@ -136,6 +136,10 @@ Creates an employee with:
 - Encapsulation
 - Private Variables
 
+### Output
+
+<img src="images/employee.png" width="250">
+
 ---
 
 # 🧑‍💼 Create Manager
@@ -151,6 +155,10 @@ Additional Field:
 - Inheritance
 - Method Overriding
 - super()
+
+### Output
+
+<img src="images/manager.png" width="250">
 
 ---
 
@@ -168,6 +176,10 @@ Additional Field:
 - Method Overriding
 - super()
 
+### Output
+
+<img src="images/dev.png" width="250">
+
 ---
 
 # 📄 Display All Records
@@ -181,30 +193,40 @@ Includes:
 - Manager Records
 - Developer Records
 
+### Output
+
+<img src="images/d1.png" width="200">
+<img src="images/d2.png" width="400">
+<img src="images/d3.png" width="400">
+
 ---
 
 # 🔍 Check Subclass
 
 Uses `issubclass()` to check inheritance.
 
-Example:
+### Output
 
-```text
-Is Manager a subclass of Employee? True
-Is Developer a subclass of Employee? True
-```
+<img src="images/sub.png" width="400">
 
 ---
+# Destructor
 
+A destructor is a special member function that is automatically called when an object goes out of scope or is explicitly deleted to deallocate memory and clean up resources used by that object.
+
+### Output
+
+<img src="images/des.png" width="250">
+
+---
 # 🚫 Error Handling
 
 The program handles invalid menu choices and submenu choices.
 
 ### Output
 
-```text
-Invalid Choice, Please Try Again. 🚫
-```
+<img src="images/error1.png" width="250">
+<img src="images/error2.png" width="350">
 
 ---
 
@@ -219,6 +241,7 @@ Invalid Choice, Please Try Again. 🚫
 | 🧹 Destructor | Clear object data |
 | 🧬 Inheritance | Parent-child relationship |
 | 🔄 Method Overriding | Redefine parent methods |
+| 🔄 Method Overloading | Multiple Method |
 | 🔒 Encapsulation | Protect private variables |
 | 📚 Lists | Store multiple objects |
 | 🔍 issubclass() | Check inheritance |
@@ -236,6 +259,7 @@ After executing the program:
 - ✅ Inheritance works correctly
 - ✅ Encapsulation protects sensitive data
 - ✅ Method overriding customizes behavior
+- ✅ Method overloading multiple way of creating
 - ✅ Destructor clears data when object is removed
 - ✅ Subclass relationships are verified
 
@@ -259,8 +283,9 @@ After executing the program:
 
 **Tirth Donga**
 
-🎓 Python OOP Project
+[![GitHub](https://img.shields.io/badge/GitHub-Tirth_Donga-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tirthdonga)
 
+🎓 Python Programming Project
 </div>
 
 ---

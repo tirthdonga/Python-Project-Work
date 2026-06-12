@@ -65,7 +65,7 @@ while True:
     print("2. Create Employee")
     print("3. Create Manager")
     print("4. Create Developer")
-    print("5. Display All People")
+    print("5. Display Details")
     print("6. Check Subclass")
     print("0. Exit\n")
     choice = int(input("Enter Your Choice: "))
