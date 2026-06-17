@@ -63,6 +63,7 @@ Build a Python console application that allows users to:
 ```text
 📦 Project 6/
 │
+├── 📂 Images
 ├── 📄 journal_manager.py
 ├── 📄 journal.txt
 └── 📄 README.md
@@ -195,9 +196,14 @@ Handles:
 
 # 👤 Author
 
+<div align="center">
+
 **Tirth Donga**
 
-Python File Handling Project
+[![GitHub](https://img.shields.io/badge/GitHub-Tirth_Donga-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tirthdonga)
+
+🎓 Python Programming Project
+</div>
 
 ---
 
