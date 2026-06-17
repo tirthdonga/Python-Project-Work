@@ -68,7 +68,7 @@ obj = journalmanager()
 while True:
   print("Welcome To Personal Journal Manager")
   print("Please Select Option\n")
-  print("1. Add a NEw Entry")
+  print("1. Add a New Entry")
   print("2. View All Entries")
   print("3. Search For Entry")
   print("4. Delete All Entries")
