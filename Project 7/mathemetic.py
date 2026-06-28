@@ -8,9 +8,11 @@ def cal_factorial():
 def compound_interest():
 
   principal = float(input("Enter The Principal Amount: "))
-  rate = float(input("Enter The Annual Interest Rate (As A Decimal, e.g., 0.05 for 5%): "))
+  raw_rate = float(input("Enter The Annual Interest Rate: "))
   time = float(input("Enter The Time The Money Is Invested For (In Years): "))
   n = float(input("Enter The Number Of Times Interest Is Compounded Per Year: "))
+
+  rate = raw_rate/100
 
   amount = principal * math.pow((1 + rate / n), (n * time))
   total_amount = round(amount, 2)

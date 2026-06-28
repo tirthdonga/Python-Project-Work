@@ -2,21 +2,21 @@ import random
 
 def random_num():
     try:
-        start = int(input("Enter start range: "))
-        end = int(input("Enter end range: "))
+        start = int(input("Enter Start Range: "))
+        end = int(input("Enter End Range: "))
 
         result = random.randint(start, end)
         
         print(f"Random Integer: {result}")
             
     except ValueError:
-        print("Error: Please enter valid integers.")
+        print("Error: Please Enter Valid Integers.")
 
 def random_list():
     try:
-        count = int(input("How many numbers do you want in your list? "))
-        start = int(input("Enter start range: "))
-        end = int(input("Enter end range: "))
+        count = int(input("How Many Numbers Do You Want In Your List? "))
+        start = int(input("Enter Start Range: "))
+        end = int(input("Enter End Range: "))
 
         random_list = [random.randint(start, end) for _ in range(count)]
         
