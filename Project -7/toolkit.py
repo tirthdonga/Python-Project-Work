@@ -17,32 +17,33 @@ while True:
 
   match choice:
     case 1: 
-      print("\nDate-Time And Time Operation")
-      print("1. Display Current Date And Time")
-      print("2. Calculate Difference Between Two Dates/Time")
-      print("3. Formate Date Into Custome Format")
-      print("4. Stopwatch")
-      print("5. Countdown Timer")
-      print("0. Back To Main Menu\n")
-      sub_choice1 = int(input("Enter Your Choice: "))
-      print()
+      while True:
+        print("\nDate-Time And Time Operation")
+        print("1. Display Current Date And Time")
+        print("2. Calculate Difference Between Two Dates/Time")
+        print("3. Formate Date Into Custome Format")
+        print("4. Stopwatch")
+        print("5. Countdown Timer")
+        print("0. Back To Main Menu\n")
+        sub_choice1 = int(input("Enter Your Choice: "))
+        print()
 
-      match sub_choice1:
-        case 1:
-          date_time.current_time()
-          print()
-        case 2: 
-          date_time.date_difference()
-        case 3: 
-          date_time.formate_date()
-        case 4: 
-          date_time.stop_watch()
-        case 5: 
-          date_time.count_down()
-        case 0: 
-          break
-        case _: 
-          print("Invalid Choice Entered 🚫")
+        match sub_choice1:
+          case 1:
+            date_time.current_time()
+            print()
+          case 2: 
+            date_time.date_difference()
+          case 3: 
+            date_time.formate_date()
+          case 4: 
+            date_time.stop_watch()
+          case 5: 
+            date_time.count_down()
+          case 0: 
+            break
+          case _: 
+            print("Invalid Choice Entered 🚫")
 
     case 2:
       while True:
