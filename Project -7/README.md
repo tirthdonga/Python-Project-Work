@@ -83,16 +83,17 @@ The program should:
 # 🏗️ Project Structure
 
 ```text
-📦 Project 7/
-│
-├── 📄 toolkit.py
-├── 📄 date_time.py
-├── 📄 mathemetic.py
-├── 📄 random_num.py
-├── 📄 file_op.py
-├── 📄 uuid_gene.py
-├── 📄 dir_modul.py
-├── 📄 abc.txt
+📦 Project-7/
+│── 📄 main.py
+│── 📂 utilities/
+│   │── 📄 __init__.py
+│   │── 📄 date_time.py
+│   │── 📄 mathematics.py
+│   │── 📄 random_num.py
+│   │── 📄 uuid_gene.py
+│   │── 📄 file_op.py
+│   └── 📄 dir_modul.py
+│ 
 └── 📄 README.md
 ```
 

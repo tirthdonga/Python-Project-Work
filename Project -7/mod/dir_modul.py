@@ -1,4 +1,8 @@
-import date_time, mathemetic, random_num, file_op, uuid_gene
+from . import date_time
+from . import mathemetic
+from . import random_num
+from . import file_op
+from . import uuid_gene
 
 def module_attributes():
     modules = {

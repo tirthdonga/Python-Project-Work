@@ -13,8 +13,11 @@ def date_difference():
    date_str1 = input("Enter The First Date (DD/MM/YYYY): ")
    date_str2 = input("Enter The Second Date (DD/MM/YYYY): ")
 
-   date_1 = datetime.datetime.strptime(date_str1, "%d/%m/%Y").date()
-   date_2 = datetime.datetime.strptime(date_str2, "%d/%m/%Y").date()
+   try:
+      date_1 = datetime.datetime.strptime(date_str1, "%d/%m/%Y").date()
+      date_2 = datetime.datetime.strptime(date_str2, "%d/%m/%Y").date()
+   except ValueError:
+      print("Invalid Date Format")
 
    gape = date_2 - date_1
 
@@ -59,7 +62,10 @@ def stop_watch():
 
 
 def count_down():
-   start = int(input("Enter The Count-Down Start: "))
+   try:
+      start = int(input("Enter The Count-Down Start: "))
+   except ValueError:
+      print("Invalid Number")
 
    for i in range(start, 0, -1):
       print(f"{i}", end="\r")
