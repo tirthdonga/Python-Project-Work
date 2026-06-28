@@ -129,7 +129,9 @@ Includes:
 
 ### Output
 
-<img src="images/DT1.png" width="300"><img src="images/DT2.png" width="300"><img src="images/DT3.png" width="300">
+<img src="images/DT1.png" width="300">
+<img src="images/DT2.png" width="300">
+<img src="images/DT3.png" width="300">
 
 ---
 
