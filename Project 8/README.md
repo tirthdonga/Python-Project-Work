@@ -63,9 +63,9 @@ Build a console-based application that demonstrates NumPy array operations while
 # 🏗️ Project Structure
 
 ```text
-📦 NumPy-Analyzer/
+📦 Project 8/
 │── 📂 images
-│── 📄 main.py
+│── 📄 numpy_analy.py
 └── 📄 README.md
 ```
 
