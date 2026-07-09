@@ -64,6 +64,7 @@ Build a console-based application that demonstrates NumPy array operations while
 
 ```text
 📦 NumPy-Analyzer/
+│── 📂 images
 │── 📄 main.py
 └── 📄 README.md
 ```
