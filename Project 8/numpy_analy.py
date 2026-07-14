@@ -11,22 +11,18 @@ class DataAnalytics:
 
     def _has_array(self) -> bool:
         if self._array is None:
-            print("Please Create An Array First.")
+            print("Please Create An Array First. 📁")
             return False
         return True
 
-    def create_array(self):
+    def create_arr(self):
         while True:
             print("\nSelect The Type Of Array To Create:")
             print("1. 1D Array")
             print("2. 2D Array")
             print("3. 3D Array")
-            print("0. Go Back")
-            try:
-                choice = int(input("Enter Your Choice: "))
-            except ValueError:
-                print("Invalid Choice.")
-                continue
+            print("0. Exit")
+            choice = int(input("Enter Your Choice: "))
             
             match choice:
                 case 1:
@@ -58,22 +54,17 @@ class DataAnalytics:
                 case 0:
                     break
                 case _:
-                    print("Invalid Choice.")
+                    print("Invalid Choice. 🚫")
 
-    def perform_indexing_slicing(self):
+    def index_slice(self):
         if not self._has_array(): return
         
         while True:
             print("\nChoose An Operation:")
             print("1. Indexing")
             print("2. Slicing")
-            print("0. Go Back")
-            try:
-                choice = int(input("Enter Your Choice: "))
-            except ValueError:
-                print("Invalid Choice.")
-                continue
-
+            print("0. Exit")
+            choice = int(input("Enter Your Choice: "))
             match choice:
                 case 1:
                     print(f"Current Array Shape: {self._array.shape}")
@@ -91,10 +82,8 @@ class DataAnalytics:
                     try:
                         r_range = input("Enter The Row Range (Start:End): ")
                         c_range = input("Enter The Column Range (Start:End): ")
-                        
                         r_start, r_end = map(int, r_range.split(':'))
                         c_start, c_end = map(int, c_range.split(':'))
-                        
                         sliced = self._array[r_start:r_end, c_start:c_end]
                         print("\nSliced Array:\n", sliced)
                     except ValueError:
@@ -102,9 +91,9 @@ class DataAnalytics:
                 case 0:
                     break
                 case _:
-                    print("Invalid Choice.")
+                    print("Invalid Choice. 🚫")
 
-    def perform_math(self):
+    def maths(self):
         if not self._has_array(): return
         
         while True:
@@ -114,7 +103,7 @@ class DataAnalytics:
             print("3. Multiplication")
             print("4. Division")
             print("5. Matrix Multiplication / Dot Product (2D)")
-            print("0. Go Back")
+            print("0. Exit")
             choice = int(input("Enter Your Choice: "))
             match choice:
                 case 1:
@@ -170,7 +159,7 @@ class DataAnalytics:
                     except ValueError:
                         print("Dimension Mismatch Or Invalid Input.")
                 case 0: break
-                case _: print("Invalid Choice.")
+                case _: print("Invalid Choice. 🚫")
 
     def combine_split(self):
         if not self._has_array(): return
@@ -179,7 +168,7 @@ class DataAnalytics:
             print("\nChoose An Option:")
             print("1. Combine Arrays")
             print("2. Split Array")
-            print("0. Go Back")
+            print("0. Exit")
             choice = int(input("Enter Your Choice: "))
 
             match choice:
@@ -199,9 +188,9 @@ class DataAnalytics:
                     except ValueError:
                         print("Invalid Splits Number.")
                 case 0: break
-                case _: print("Invalid Choice.")
+                case _: print("Invalid Choice. 🚫")
 
-    def search_sort_filter(self):
+    def search(self):
         if not self._has_array(): return
 
         while True:
@@ -209,7 +198,7 @@ class DataAnalytics:
             print("1. Search A Value")
             print("2. Sort The Array")
             print("3. Filter Values")
-            print("0. Go Back")
+            print("0. Exit")
             choice = int(input("Enter Your Choice: "))
             match choice:
                 case 1:
@@ -228,7 +217,7 @@ class DataAnalytics:
                     val = float(input("Enter A Value To Filter Numbers Greater Than It: "))
                     print(f"\nFiltered Array (Values > {val}):\n", self._array[self._array > val])
                 case 0: break
-                case _: print("Invalid Choice.")
+                case _: print("Invalid Choice. 🚫")
     
 
     def compute_stats(self):
@@ -241,7 +230,7 @@ class DataAnalytics:
             print("3. Median")
             print("4. Standard Deviation")
             print("5. Variance")
-            print("0. Go Back")
+            print("0. Exit")
             choice = int(input("Enter Your Choice: "))
 
             print("\nOriginal Array:\n", self._array)
@@ -252,7 +241,7 @@ class DataAnalytics:
                 case 4: print(f"\nStandard Deviation Of Array: {np.std(self._array)}")
                 case 5: print(f"\nVariance Of Array: {np.var(self._array)}")
                 case 0: break
-                case _: print("Invalid Choice.")
+                case _: print("Invalid Choice. 🚫")
 
 
 def main():
@@ -271,16 +260,16 @@ def main():
         choice = int(input("Enter Your Choice: "))
         
         match choice:
-            case 1: analyzer.create_array()
-            case 2: analyzer.perform_indexing_slicing()
-            case 3: analyzer.perform_math()
+            case 1: analyzer.create_arr()
+            case 2: analyzer.index_slice()
+            case 3: analyzer.maths()
             case 4: analyzer.combine_split()
-            case 5: analyzer.search_sort_filter()
+            case 5: analyzer.search()
             case 6: analyzer.compute_stats()
             case 7:
-                print("\nThank You For Using The NumPy Analyzer! Goodbye!")
+                print("\nThank You For Using The NumPy Analyzer! Goodbye! 👋👋")
                 break
-            case _: print("Invalid Choice, Please Try Again.")
+            case _: print("Invalid Choice, Please Try Again. 🚫")
 
 if __name__ == "__main__":
     main()
